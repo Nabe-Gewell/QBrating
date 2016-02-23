@@ -1,26 +1,25 @@
 package main;
 // Code starts
 import java.util.Scanner;
-import java.math.*;
 public class QBrating {
 	public static void main(String[] args) {
 		//getting inputs
 		double[] vars = getInputs(); 
 		
-		//Variables
+		//Variables, defined in inputs section
 		double att = vars[0];
 		double comp = vars[1];
 		double yds = vars[2];
 		double td = vars[3];
 		double intr = vars[4];
 
-		//Calculations
+		//Calculations, taken off of Wiki page
 		double a = ((comp/att) - .3) * 5;
 		double b = ((yds/att) - 3) * .25;
 		double c = (td/att) * 20;
 		double d = 2.375 - ((intr/att) * 25);
 		double passer = ((a + b + c + d)/6) * 100;
-
+		//Rounding attempted past here to match site. Not needed assuming
 		
 		//Printing
 		System.out.println("The passer rating is " + passer);
